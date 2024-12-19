@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Varela Round", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e6f3ff, #f0e6ff);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating-cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.cloud-1 {
+  top: 10%;
+  right: 5%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 0s;
+}
+.cloud-2 {
+  top: 30%;
+  left: 10%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 1s;
+}
+.cloud-3 {
+  bottom: 20%;
+  right: 15%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 2s;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #4a5568;
+  position: relative;
+  z-index: 1;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #4a5568;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.services-scroll {
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+  z-index: 1;
+}
+
+.services-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.services-container {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.service-card {
+  flex: 0 0 300px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.2);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.description {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-weight: bold;
+  color: #4a5568;
+}
+
+.extra {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.book-button {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #93c5fd, #818cf8);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.2);
+}
+
+.book-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(129, 140, 248, 0.3);
+  background: linear-gradient(135deg, #60a5fa, #6366f1);
+}
